@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MNR Sketch Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neon: {
+                blue: '#00f3ff',
+                green: '#00ff41',
+                magenta: '#ff00ff',
+                yellow: '#fbff00',
+                dark: '#050505',
+                card: '#111111'
+              }
+            },
+            boxShadow: {
+              'neon-blue': '0 0 5px #00f3ff, 0 0 10px #00f3ff',
+              'neon-green': '0 0 5px #00ff41, 0 0 10px #00ff41',
+              'neon-magenta': '0 0 5px #ff00ff, 0 0 10px #ff00ff',
+              'neon-yellow': '0 0 5px #fbff00, 0 0 10px #fbff00',
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'spin-medium': 'spin 6s linear infinite',
+              'spin-reverse-slow': 'spin 12s linear infinite reverse',
+              'spin-reverse': 'spin 3s linear infinite reverse',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      /* Custom Scrollbar for Neon Look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f3ff;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
